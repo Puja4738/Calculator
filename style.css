@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'poppins',sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color:  rgb(138, 143, 125);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.calculator{
+    border: 3px solid #717367;
+    background-color:rgb(40, 40, 40);
+    padding: 20px;
+    border-radius: 15px;
+}
+.calculator form button{
+    border: 0;
+    outline: 0;
+    width: 55px;
+    height: 40px;
+    border-radius: 20px;
+    box-shadow: -8px -8px 15px rgba(255,255,255,0.1),5px 5px 15px rgba(0,0,0,0.2);
+    background: transparent;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+    border: 2px solid #717367;
+
+}
+.calculator form button:hover,
+.calculator form button:active{
+    background-color: rgb(163, 168, 150);
+    color: black;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+form .display{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+form .display input{
+    background-color:rgb(163, 168, 150);
+    color: rgb(0, 0, 0);
+    height: 80px;
+    width: 80px;
+    text-align: right;
+    border-radius: 8px;
+    flex: 1;
+    font-size: 35px;
+    box-shadow: none;
+    padding-right: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+input::placeholder{
+    color: white;
+}
+form button.operator{
+    color: rgba(255,144,9);
+}
+form button.operator:hover,
+form button.operator:active{
+    background-color: papayawhip;
+    color: orangered;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+form button#equal{
+    background-color: orangered;
+    color: white;
+    border: 1px solid ;
+}
+
+@media (max-width:400px) {
+    .calculator{
+        padding: 15px;
+        border-radius: 10px;
+        max-width: 100%;
+    }
+    form .display input{
+        height: 50px;
+        font-size: 24px;
+    }
+    .calculator form .buttons{
+        gap: 8px;
+    }
+    .calculator form button{
+        height: 45px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width:320px) {
+    .calculator{
+        padding: 10px;
+        /* border-radius: 8px; */
+    }
+    .calculator form .display input{
+        height: 45px;
+        font-size: 24px;
+    }
+    .calculator form button{
+        height: 40px;
+        font-size: 16px;
+    }
+    .calculator form .buttons{
+        /* display: grid;
+        grid-template-columns: repeat(4,1fr); */
+        gap: 5px;
+    }
+}
